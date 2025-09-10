@@ -7,6 +7,26 @@
             body {
                 background-color: azure;
             }
+            table,
+            th,
+            td{
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+
+            form{
+                width:40%;
+                background-color: whitesmoke;
+                padding:20px;
+                border-radius:8px;
+            }
+
+            @media(max-width:400px) {
+                body{
+                    background-color:
+                    lightcyan;
+                }
+            
         </style>
 
         <link rel ="stylesheet" href = "Styles.css">
@@ -14,11 +34,77 @@
     </head>
 
     <body>
-
-    <h1 style ="color: blue; text-align:center">Welcome to HTML</h1>
-    <p>This is a paragraph elemnet, <b>HTML</b> uses tags to mark up content.</p>
-    <img src="http://1.bp.blogspot.com/-NGHwBncyA68/UiMm_8b2ZUI/AAAAAAAAAnA/17OGXCKI4zE/s1600/Logo+HTML5.JPG" alt="HTML Logo">
+        <div class = "header">
+            <h1 style ="color: blue; text-align:center">Welcome to HTML1! </h1>
+            <span id = "highlight">HTML!</span></div></h>
+        </div>
+        <p>This is a paragraph elemnet, <b>HTML</b> uses tags to mark up content.</p>
+        <img src="http://1.bp.blogspot.com/-NGHwBncyA68/UiMm_8b2ZUI/AAAAAAAAAnA/17OGXCKI4zE/s1600/Logo+HTML5.JPG" alt="HTML Logo">
     <p> To learn more about HTML, visit <a href="https://www.w3schools.com/" target="blank"> <i>w3schools</i></a></p>
     <p>In order to got to the second page<a href="next.html">Click Here</a></p>
+    <p> The concepts that will be coveredhere are:</p>
+    <ol>
+        <li>HTML Lists</li>
+        <li>HTML Forms</li>
+        <li> HTML</li>
+    </lo>
+    <table>
+        <caption>Personal Information</caption>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Tshering</td>
+                <td>Wangmo</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>pema</td>
+                <td>Dorji</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>Leki</td>
+                <td>Wangmo</td>
+                <td>41</td>
+            </tr>
+    </table>
+
+    <form>
+        <fieldset>
+            <legend>User Personal Information</legend>
+            <label for="name">Enter your full name:</label>
+            <input type="text" id="name" name="name" required />
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Enter your password:</label>
+            <input type="password" id="password" name="pass" required />
+
+            <label>Enter your gender:</label>
+            <div class="gender-group">
+                <input type="radio" name="gender" value="male" id="male" required />
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female" />
+                 <label for="female">Female</label>
+                 <input type="radio" name="gender" value="others" id="others" />
+                 <label for="others">Others</label>
+            </div>
+
+            <label for="dob">Enter your Date of Birth: </label>
+            <input type="date" id="dob" name="dob" required />
+            <label for = "designation">Occupation</label>
+            <select id = "designation" name = "Occupation">
+                <option value="Government">Government Service</option>
+                <option value="Private">Private Sectors</option>
+
+            </select>
+            <label for="address">Enter your Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <input type="submit" value="Submit" />
+        </fieldset>
+
+    </form>
     </body>
 </html>
