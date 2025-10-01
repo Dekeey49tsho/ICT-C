@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Portfolio - About Me Toggle</title>
+ <style>
+   body {
+     margin: 1vw;
+   }
+
+
+   #more {
+     display: none; /* Initially hidden */
+   }
+
+
+   button {
+     padding: 1vw 3vw;
+     border: none;
+     background-color: green;
+     color: white;
+     cursor: pointer;
+     border-radius: 4px;
+   }
+
+
+   button:hover {
+     background-color: lightgreen;
+     color: black;
+   }
+ </style>
+</head>
+<body>
+
+
+ <div class="about">
+   <h3>About Me</h2>
+   <p>
+     Hello! I am passionate about web development.
+     I enjoy creating interactive and user-friendly websites.
+     <span id="dots">...</span>
+     <span id="more">
+       In my free time, I love exploring new technologies, contributing to open-source projects,
+       and teaching others. My long-term goal is to become a full-stack developer and work on
+       impactful projects that make life easier for people.
+     </span>
+   </p>
+   <button onclick="toggleText()" id="myBtn">Read More</button>
+ </div>
+
+
+ <script>
+   function toggleText() {
+     let dots = document.getElementById("dots");
+     let moreText = document.getElementById("more");
+     let btnText = document.getElementById("myBtn");
+
+
+     if (dots.style.display === "none") {
+       // If extra text is shown, collapse it
+       dots.style.display = "inline"; // Show the dots
+       btnText.innerHTML = "Read More"; // Change button text
+       moreText.style.display = "none"; // Hide the extra text
+     } else {
+       // If extra text is hidden, expand it
+       dots.style.display = "none"; // Hide the dots
+       btnText.innerHTML = "Read Less"; // Change button text
+       moreText.style.display = "inline"; // Show the extra text
+     }
+   }
+ </script>
+
+
+</body>
+</html>
+
+
+

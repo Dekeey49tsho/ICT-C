@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DOM Manipulation Example</title>
+ <style>
+   .highlight {
+     background-color: yellow;
+     padding: 5px;
+   }
+ </style>
+  <script>
+ document.addEventListener("DOMContentLoaded", () => {
+   let heading = document.getElementById("title");
+
+
+   // Change text
+   heading.textContent = "Hello DOM!"; //Doesn't parse HTML tags.
+
+
+   // Change HTML content
+   heading.innerHTML = "<em>Welcome</em>"; //Parses HTML tags.
+
+
+   // Change attributes
+   heading.setAttribute("class", "highlight");
+
+
+   // Change styles
+   heading.style.color = "blue";
+   heading.style.fontSize = "24px";
+ });
+ </script>
+
+
+</head>
+<body>
+ <h1 id="title">Original Heading</h1>
+</body>
+</html>
+
+
+
